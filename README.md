@@ -64,7 +64,7 @@ type `Ctrl + Shift + B`
 
 ## Load extension to chrome
 
-Load `dist` directory
+Load `build` directory
 
 ## Test
 `npx jest` or `npm run test`

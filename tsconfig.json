@@ -1,15 +1,24 @@
 {
-    "compilerOptions": {
-        "strict": true,
-        "target": "es6",
-        "moduleResolution": "bundler",
-        "module": "ES6",
-        "esModuleInterop": true,
-        "sourceMap": false,
-        "rootDir": "src",
-        "outDir": "dist/js",
-        "noEmitOnError": true,
-        "jsx": "react",
-        "typeRoots": [ "node_modules/@types" ]
-    }
+  "compilerOptions": {
+    "allowJs": true, // Ensure JavaScript files are allowed
+    "checkJs": false,
+    "experimentalDecorators": true,
+    "allowUnreachableCode": false /* Disable error reporting for unreachable code. */,
+    "noUnusedLocals": true,
+    "removeComments": true /* Enable error reporting when local variables aren't read. */,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es6",
+    "moduleResolution": "bundler",
+    "module": "ES6",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "noEmitOnError": true,
+    "jsx": "react",
+    "typeRoots": ["node_modules/@types"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.mjs"],
+  "exclude": ["node_modules", "dist", "build"]
 }
