@@ -1,70 +1,48 @@
-# Chrome Extension TypeScript Starter
+# Cross Extension Template
 
-![build](https://github.com/chibat/chrome-extension-typescript-starter/workflows/build/badge.svg)
+A cross-browser extension template using **Manifest V2 (MV2)** with TypeScript and Webpack.
 
-Chrome Extension, TypeScript and Visual Studio Code
+## Features
+- Uses **Manifest V2** for compatibility with legacy browsers.
+- Supports **TypeScript** for better development experience.
+- Bundles with **Webpack** for optimized output.
+- Uses **browser-polyfill.js** for cross-browser support.
+- Includes **Husky** for Git hooks integration.
+- Supports **Prettier** for code formatting.
+- Provides an easy build system with **npm scripts**.
 
-## Prerequisites
+## Installation
 
-* [node + npm](https://nodejs.org/) (Current Version)
-
-## Option
-
-* [Visual Studio Code](https://code.visualstudio.com/)
-
-## Includes the following
-
-* TypeScript
-* Webpack
-* React
-* Jest
-* Example Code
-    * Chrome Storage
-    * Options Version 2
-    * content script
-    * count up badge number
-    * background
-
-## Project Structure
-
-* src/typescript: TypeScript source files
-* src/assets: static files
-* dist: Chrome Extension directory
-* dist/js: Generated JavaScript files
-
-## Setup
-
-```
+Clone this repository and install dependencies:
+```sh
+git clone https://github.com/maanimis/cross-extension-template
+cd cross-extension-template
 npm install
 ```
 
-## Import as Visual Studio Code project
+## Building
 
-...
-
-## Build
-
-```
+To build the extension for production:
+```sh
 npm run build
 ```
+This will compile TypeScript, bundle the scripts, and clean the `dist/` folder.
 
-## Build in watch mode
+## Loading the Extension in Chrome/Firefox
+1. Go to `chrome://extensions/` (for Chrome) or `about:debugging#/runtime/this-firefox` (for Firefox).
+2. Enable **Developer Mode** (Chrome) or click **Load Temporary Add-on** (Firefox).
+3. Click **Load Unpacked** and select the `build/` directory.
 
-### terminal
+## Manifest Details
+This extension is built with **Manifest V2**, which includes:
+- **browser_action**: Defines a popup UI.
+- **background scripts**: Includes `background.js` for persistent background tasks.
+- **content scripts**: Injects `content_script.js` into web pages.
+- **permissions**: Uses `storage`, `activeTab`, `webRequest`, and more.
 
-```
-npm run watch
-```
+## Cross-Browser Support
+This extension uses **browser-polyfill.js**, which provides a unified API across different browsers.
 
-### Visual Studio Code
+## License
+This project is licensed under the MIT License.
 
-Run watch mode.
-
-type `Ctrl + Shift + B`
-
-## Load extension to chrome
-
-Load `build` directory
-
-## Test
-`npx jest` or `npm run test`
